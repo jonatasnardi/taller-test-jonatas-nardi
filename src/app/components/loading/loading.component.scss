@@ -1,0 +1,24 @@
+@import '../../../styles/shared';
+
+.container-loader {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.loading {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 5px solid $secondary;
+  border-top-color: $primary;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}

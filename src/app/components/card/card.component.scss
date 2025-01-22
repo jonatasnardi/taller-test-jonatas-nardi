@@ -1,0 +1,55 @@
+@import '../../../styles/shared';
+
+.card {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 6px;
+  height: 180px;
+  transition: 0.3s;
+  background: $gray-light;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  .card-body {
+    max-width: 100%;
+  }
+
+  .card-title {
+    text-align: center;
+    color: $secondary;
+    font-weight: bold;
+
+    @include xs() {
+      font-size: 13px;
+    }
+  }
+
+  .card-text {
+    font-weight: 500;
+    color: $secondary;
+    text-align: center;
+    max-width: 100%;
+
+    @include xs() {
+      font-size: 12px;
+    }
+  }
+
+  .card-icon {
+    width: 100%;
+    display: block;
+    text-align: center;
+
+    mat-icon {
+      color: $secondary;
+    }
+  }
+}

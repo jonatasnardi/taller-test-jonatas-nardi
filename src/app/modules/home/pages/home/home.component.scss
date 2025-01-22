@@ -1,0 +1,13 @@
+@import '../../../../../styles/shared';
+
+.wrapper-home {
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  .card-item {
+    width: 100%;
+  }
+}

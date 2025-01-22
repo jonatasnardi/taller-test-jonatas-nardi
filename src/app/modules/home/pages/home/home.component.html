@@ -1,0 +1,28 @@
+<div class="wrapper-home">
+  <taller-title [title]="'Jonatas Nardi - Taller test'"></taller-title>
+
+  <div class="box-cards" *loading="isLoadingData">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Search</mat-label>
+        <input matInput placeholder="Ex: John" (input)="onSearch($event)">
+      </mat-form-field>
+    </form>
+
+    <mat-grid-list 
+      *ngIf="hasUsers;else noContent"
+      [cols]="breakpoint" 
+      rowHeight="1:1" 
+      [gutterSize]="'10px'" 
+      (window:resize)="onResize($event)">
+      <mat-grid-tile *ngFor="let item of users">
+        <taller-card class="card-item" [item]="item"></taller-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+  </div>
+</div>
+
+<ng-template #noContent>
+  <p>No results found</p>
+</ng-template>
